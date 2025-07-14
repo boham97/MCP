@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# VSCode 설정 (선택)
+.vscode/
+
+# Jupyter Notebook 체크포인트
+.ipynb_checkpoints/
