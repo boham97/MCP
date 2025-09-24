@@ -1,4 +1,5 @@
 from mcp.server.fastmcp import FastMCP
+import requests
 
 # Initialize FastMCP server with configuration
 mcp = FastMCP(
@@ -8,6 +9,20 @@ mcp = FastMCP(
     port=8005,  # Port number for the server
 )
 
+@mcp.tool()
+async def get_weather_forecast() -> str:
+    """
+    Get mid-term weather forecast from a predefined URL.
+    Returns:
+        str: A string containing the weather forecast information
+    """
+    url = f"https://www.weather.go.kr/w/weather/forecast/mid-term.do?stnId1=109"
+    
+    try:
+        response = requests.get(url)
+        return response.text
+    except Exception as e:
+        return f"오류: {e}"
 
 @mcp.tool()
 async def get_weather(location: str) -> str:
