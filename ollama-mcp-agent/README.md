@@ -165,3 +165,6 @@ Enter one of the following commands to exit the program:
 ## License
 
 MIT License
+
+
+`uv add beautifulsoup4`
