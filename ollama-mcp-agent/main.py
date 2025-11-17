@@ -59,7 +59,8 @@ USE_ASTREAM_LOG = True
 # LLM model settings that support Tool calling
 QWEN3_8B = "qwen3:8b"  # default model
 QWEN3_4B = "qwen3:4b"
-QWEN3 = QWEN3_8B
+QWEN3_14B = "qwen3:14b"
+QWEN3 = QWEN3_14B
 
 
 # Signal handler for Ctrl+C on Windows
